@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste d'interventions</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicongdor.ico">
+    <link rel="stylesheet" href="../css/liste-intervention.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-block">
+            <img src="../images/favicongdor.ico" alt="ONEA Logo" class="logo">
+            <div class="sne-title">ONEA<br><span>Office National de l'Eau et de l'Assainissement</span></div>
+        </div>
+        <nav>
+            <ul>
+                <!--<li class="active"><span class="icon">🏠</span> Accueil</li>
+                <li>
+                    <span class="icon">📝</span> Interventions
+                    <ul class="submenu">
+                        <li class="active">Liste d'interventions</li>
+                        <li>Nouvelle intervention</li>
+                    </ul>
+                </li>
+                <li><span class="icon">📅</span> Planning</li>
+                <li><span class="icon">👤</span> Abonnés</li>
+                <li><span class="icon">📊</span> Rapports</li>
+                <li><span class="icon">📦</span> Stock</li>-->
+                <li><span class="icon">⚙️</span> Paramètres</li>
+                <li class="logout"><span class="icon">🚪</span> Déconnexion</li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main-content">
+        <header class="main-header">
+            <button class="menu-btn">☰</button>
+            <h1>Liste d'interventions</h1>
+            <div class="user-block">
+                <span class="notif"><span class="notif-badge">5</span>🔔</span>
+                <span class="user-info">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="avatar" class="avatar">
+                    <span class="user-name">OUATTARA DRAMANE<br><span class="user-role">Technicien</span></span>
+                </span>
+            </div>
+        </header>
+        <section class="stats-bar">
+            <div class="stat">
+                <div class="stat-value">24</div>
+                <div class="stat-label">Total interventions</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">8</div>
+                <div class="stat-label">En cours</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">16</div>
+                <div class="stat-label">Terminées</div>
+            </div>
+            <div class="stat stat-filter">
+                <select>
+                    <option>Tous les statuts</option>
+                    <option>En cours</option>
+                    <option>Terminée</option>
+                    <option>En attente</option>
+                </select>
+            </div>
+        </section>
+        <section class="table-section">
+            <div class="table-header">
+                <button class="btn-nouvelle">+ Nouvelle intervention</button>
+                <div class="search-block">
+                    <input type="text" placeholder="Rechercher...">
+                    <button class="btn-search">🔍</button>
+                </div>
+            </div>
+            <table class="interv-table">
+                <thead>
+                    <tr>
+                        <th>Demande de Travaux</th>
+                        <th>Référence abonné</th>
+                        <th>Demande d'interv n°</th>
+                        <th>Demandeur</th>
+                        <th>Date demande</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009806</a></td>
+                        <td>2501.05.20.5620.00</td>
+                        <td>BA.12009806OUATTARA DRAMANE</td>
+                        <td>OUATTARA DRAMANE</td>
+                        <td>20/05/2025 09:15</td>
+                        <td><span class="badge badge-encours">En cours</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009805</a></td>
+                        <td>2501.05.19.4587.00</td>
+                        <td>BA.12009805KONE IBRAHIM</td>
+                        <td>KONE IBRAHIM</td>
+                        <td>19/05/2025 14:32</td>
+                        <td><span class="badge badge-encours">En cours</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009804</a></td>
+                        <td>2501.05.19.1123.00</td>
+                        <td>BA.12009804TRAORE AISSATA</td>
+                        <td>TRAORE AISSATA</td>
+                        <td>19/05/2025 11:05</td>
+                        <td><span class="badge badge-terminee">Terminée</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009803</a></td>
+                        <td>2501.05.18.7789.00</td>
+                        <td>BA.12009803DIARRA MAMADOU</td>
+                        <td>DIARRA MAMADOU</td>
+                        <td>18/05/2025 16:47</td>
+                        <td><span class="badge badge-terminee">Terminée</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009802</a></td>
+                        <td>2501.05.18.3344.00</td>
+                        <td>BA.12009802SANGARE MOUSSA</td>
+                        <td>SANGARE MOUSSA</td>
+                        <td>18/05/2025 10:22</td>
+                        <td><span class="badge badge-attente">En attente</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009801</a></td>
+                        <td>2501.05.17.8890.00</td>
+                        <td>BA.12009801COULIBALY ZAKARIA</td>
+                        <td>COULIBALY ZAKARIA</td>
+                        <td>17/05/2025 15:10</td>
+                        <td><span class="badge badge-attente">En attente</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009800</a></td>
+                        <td>2501.05.17.6655.00</td>
+                        <td>BA.12009800FOFANA ADAMA</td>
+                        <td>FOFANA ADAMA</td>
+                        <td>17/05/2025 09:40</td>
+                        <td><span class="badge badge-terminee">Terminée</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                    <tr data-link="retour-interv.html">
+                        <td><a href="#">BA009799</a></td>
+                        <td>2501.05.16.2233.00</td>
+                        <td>BA.12009799CAMARA ALY</td>
+                        <td>CAMARA ALY</td>
+                        <td>16/05/2025 13:55</td>
+                        <td><span class="badge badge-encours">En cours</span></td>
+                        <td><button class="btn-view">👁️</button></td>
+                        <td><span class="arrow-cell">➔</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span>...</span>
+            </div>
+            <div class="table-footer">Affichage de 1 à 8 sur 24 interventions</div>
+        </section>
+    </main>
+    <script src="../js/liste-intervention.js"></script>
+    <script src="../js/protection-site.js"></script>
+</body>
+</html>
