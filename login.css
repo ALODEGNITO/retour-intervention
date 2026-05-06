@@ -1,0 +1,392 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: linear-gradient(120deg, #e3f0ff 0%, #3b82f6 100%);
+}
+
+.container-login {
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background: none;
+}
+
+.login-left {
+	position: relative;
+	width: 40vw;
+	min-width: 350px;
+	max-width: 500px;
+	background: linear-gradient(120deg, #3b82f6 0%, #e3f0ff 100%);
+	border-radius: 20px 0 0 20px;
+	overflow: hidden;
+	box-shadow: 0 8px 32px rgba(59, 130, 246, 0.10);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.background-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+	filter: blur(4px) brightness(0.85);
+	transition: filter 0.3s;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(59, 130, 246, 0.15);
+	z-index: 2;
+}
+
+.login-left-content {
+	position: relative;
+	z-index: 3;
+	padding: 40px 32px 32px 32px;
+	color: #fff;
+	text-align: left;
+	background: none;
+}
+
+.logo-sne {
+	width: 60px;
+	margin-bottom: 10px;
+	background: #fff;
+	border-radius: 50%;
+	padding: 6px;
+	box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+}
+
+.login-left h2 {
+	margin: 0 0 4px 0;
+	font-size: 2rem;
+	color: #fff;
+	font-weight: 700;
+}
+.subtitle {
+	margin: 0 0 16px 0;
+	font-size: 1.1rem;
+	color: #e0e7ef;
+}
+.login-left hr {
+	border: none;
+	border-top: 1.5px solid #e0e7ef;
+	margin: 18px 0 18px 0;
+}
+.login-left h3 {
+	margin: 0 0 8px 0;
+	font-size: 1.3rem;
+	color: #fff;
+	font-weight: 600;
+}
+.desc {
+	color: #e0e7ef;
+	font-size: 1rem;
+	margin-bottom: 30px;
+}
+.features {
+	display: flex;
+	gap: 18px;
+	margin-top: 30px;
+}
+.feature {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	font-size: 0.95rem;
+	min-width: 80px;
+}
+.feature .icon {
+	font-size: 1.6rem;
+	margin-bottom: 4px;
+}
+.feature small {
+	color: #e0e7ef;
+	font-size: 0.85em;
+}
+
+.login-right {
+	width: 420px;
+	background: linear-gradient(120deg, #e3f0ff 0%, #f3f6fb 100%);
+	border-radius: 0 20px 20px 0;
+	box-shadow: 0 8px 32px rgba(59, 130, 246, 0.10);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 32px;
+}
+
+.login-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 4px 24px rgba(59,130,246,0.10);
+	padding: 32px 24px;
+}
+@media (max-width: 1200px) {
+	.login-left {
+		border-radius: 0;
+	}
+	.login-right {
+		border-radius: 0;
+	}
+	.login-form {
+		border-radius: 10px;
+		padding: 18px 6vw;
+	}
+}
+@media (max-width: 700px) {
+	.login-form {
+		padding: 12px 2vw;
+	}
+}
+@media (max-width: 480px) {
+	.login-form {
+		padding: 8px 1vw;
+	}
+}
+.avatar {
+	background: #e3f0ff;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 18px;
+}
+.login-form h1 {
+	margin: 0 0 8px 0;
+	font-size: 2rem;
+	color: #222;
+	font-weight: 700;
+}
+.form-desc {
+	color: #888;
+	font-size: 1rem;
+	margin-bottom: 18px;
+	text-align: center;
+}
+.input-group {
+	width: 100%;
+	margin-bottom: 18px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.input-group label {
+	font-size: 1rem;
+	color: #222;
+	margin-bottom: 6px;
+	font-weight: 500;
+}
+.input-group input {
+	padding: 12px 14px;
+	border: 1.5px solid #e0e7ef;
+	border-radius: 8px;
+	font-size: 1rem;
+	outline: none;
+	transition: border 0.2s;
+	background: #f8fafc;
+}
+.input-group input:focus {
+	border-color: #3b82f6;
+}
+.password-group {
+	position: relative;
+}
+.toggle-password {
+	position: absolute;
+	right: 14px;
+	top: 38px;
+	cursor: pointer;
+	user-select: none;
+	color: #888;
+	display: flex;
+	align-items: center;
+}
+.btn-login {
+	width: 100%;
+	background: #2563eb;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 14px 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-top: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+	transition: background 0.2s;
+}
+.btn-login:hover {
+	background: #1d4ed8;
+}
+.btn-icon {
+	display: flex;
+	align-items: center;
+}
+.note-access {
+	color: #888;
+	font-size: 0.95rem;
+	margin-top: 18px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	text-align: center;
+}
+
+@media (max-width: 1200px) {
+	.container-login {
+		flex-direction: column;
+		min-height: unset;
+	}
+	.login-left, .login-right {
+		width: 100vw;
+		max-width: none;
+		border-radius: 0;
+	}
+	.login-left {
+		min-height: 220px;
+		height: 220px;
+	}
+	.login-right {
+		padding: 32px 12px;
+	}
+}
+
+@media (max-width: 700px) {
+	.container-login {
+		flex-direction: column;
+		min-height: unset;
+	}
+	.login-left, .login-right {
+		width: 100vw;
+		max-width: none;
+		border-radius: 0;
+	}
+	.login-left {
+		min-height: 160px;
+		height: 160px;
+	}
+	.login-left-content {
+		padding: 18px 10px 10px 10px;
+	}
+	.logo-sne {
+		width: 40px;
+	}
+	.login-left h2 {
+		font-size: 1.2rem;
+	}
+	.subtitle, .desc, .feature, .feature small {
+		font-size: 0.9rem;
+	}
+	.features {
+		gap: 8px;
+		margin-top: 10px;
+	}
+	.background-img {
+        min-height: 100px;
+        object-fit: contain;
+        object-position: top center;
+        height: 100%;
+        width: 100%;
+        background: #e3f0ff;
+	}
+	.login-right {
+		padding: 18px 4vw;
+	}
+	.login-form h1 {
+		font-size: 1.3rem;
+	}
+	.form-desc {
+		font-size: 0.95rem;
+	}
+	.input-group input {
+		font-size: 0.95rem;
+		padding: 10px 10px;
+	}
+	.btn-login {
+		font-size: 1rem;
+		padding: 10px 0;
+	}
+	.note-access {
+		font-size: 0.85rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.container-login {
+		flex-direction: column;
+		min-height: unset;
+	}
+	.login-left, .login-right {
+		width: 100vw;
+		max-width: none;
+		border-radius: 0;
+	}
+	.login-left {
+		min-height: 100px;
+		height: 100px;
+	}
+	.login-left-content {
+		padding: 8px 2vw 6px 2vw;
+	}
+	.logo-sne {
+		width: 28px;
+	}
+	.login-left h2 {
+		font-size: 1rem;
+	}
+	.subtitle, .desc, .feature, .feature small {
+		font-size: 0.8rem;
+	}
+	.features {
+		gap: 4px;
+		margin-top: 4px;
+	}
+	.background-img {
+		min-height: 100px;
+		object-fit: cover;
+		object-position: center 30%;
+	}
+	.login-right {
+		padding: 8px 2vw;
+	}
+	.login-form h1 {
+		font-size: 1.1rem;
+	}
+	.form-desc {
+		font-size: 0.85rem;
+	}
+	.input-group input {
+		font-size: 0.85rem;
+		padding: 8px 6px;
+	}
+	.btn-login {
+		font-size: 0.95rem;
+		padding: 8px 0;
+	}
+	.note-access {
+		font-size: 0.75rem;
+	}
+}
