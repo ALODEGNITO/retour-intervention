@@ -25,6 +25,6 @@ if (loginForm) {
 			return;
 		}
 		// Redirection vers la page des interventions
-		window.location.href = 'html/liste-interventions.html';
+		window.location.href = '/liste-interventions.html';
 	});
 }
