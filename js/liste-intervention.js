@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const confirmLogout = window.confirm('Vous voulez vraiment vous déconnecter ?');
             if (confirmLogout) {
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             }
             // Sinon, ne rien faire (rester sur la page)
         });
